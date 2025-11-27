@@ -10,7 +10,7 @@ import { InvoiceService } from '../../core/services/invoice.service';
   templateUrl: './dashboard.html',
   styleUrls: ['./dashboard.css']
  })
- export class DashboardComponent implements OnInit {
+ export class Dashboard implements OnInit {
   stats!: DashboardStats;
   monthlyData!: MonthlyData[];
   vendorData!: VendorData[];
