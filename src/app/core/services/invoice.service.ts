@@ -3,21 +3,21 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Invoice, InvoiceStatus } from '../models/invoice.model';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class InvoiceService {
   private apiUrl = 'http://localhost:5000/api/invoices';
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
   getAll(filters?: any): Observable<Invoice[]> {
     let params = new HttpParams();
     if (filters) {
-      Object.keys(filters).forEach(key => {
+      Object.keys(filters).forEach((key) => {
         if (filters[key]) {
           params = params.set(key, filters[key]);
         }
       });
-    } 
-return this.http.get<Invoice[]>(this.apiUrl, { params });
+    }
+    return this.http.get<Invoice[]>(this.apiUrl, { params });
   }
   getById(id: number): Observable<Invoice> {
     return this.http.get<Invoice>(`${this.apiUrl}/${id}`);
