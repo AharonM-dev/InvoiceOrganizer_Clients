@@ -1,12 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+<<<<<<< Updated upstream
 import { RouterLink } from '@angular/router';
+=======
+import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
+import { Router, RouterLink } from '@angular/router';
+>>>>>>> Stashed changes
 import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, ReactiveFormsModule, RouterLink],
    styleUrls: ['./login.css'],
   templateUrl: './login.html'
 })
@@ -32,4 +37,7 @@ export class LoginComponent {
     }
   }
 }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
