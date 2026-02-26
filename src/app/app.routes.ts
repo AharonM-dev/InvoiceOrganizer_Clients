@@ -11,7 +11,11 @@ import { Reports } from './features/reports/reports';
 import { Settings } from './features/settings/settings/settings';
 
 export const routes: Routes = [
+<<<<<<< Updated upstream
   { path: '', component: HomeComponent },
+=======
+  { path: '', component: HomeComponent, pathMatch: 'full' },
+>>>>>>> Stashed changes
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   {
